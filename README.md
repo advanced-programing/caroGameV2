@@ -22,7 +22,7 @@ This is a source code of a CARO GAME between 2 players playing on a computer.
 # Future Development
 + Add Undo Button 
 + A Player plays with computer 
-+ Player though internet
++ Playing though the internet
 
 # Reference 
 https://nguyenvanquan7826.wordpress.com/2014/06/11/java-game-co-caro-2-nguoi-choi/
