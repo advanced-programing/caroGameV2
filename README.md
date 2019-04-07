@@ -19,5 +19,10 @@ This is a source code of a CARO GAME between 2 players playing on a computer.
 
 ![useMenuBar](https://user-images.githubusercontent.com/28797830/55676947-bf8fe600-5908-11e9-8de2-a19738ae9c2d.png)
 
+# Future Development
++ Add Undo Button 
++ A Player plays with computer 
++ Player though internet
+
 # Reference 
 https://nguyenvanquan7826.wordpress.com/2014/06/11/java-game-co-caro-2-nguoi-choi/
