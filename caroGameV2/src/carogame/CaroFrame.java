@@ -138,6 +138,7 @@ public class CaroFrame extends JFrame implements ActionListener {
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(createPanelGraphics(), BorderLayout.CENTER);
         panel.add(createSidebarPanel(true), BorderLayout.NORTH);
+        panel.add(createLeftSideBar(), BorderLayout.WEST); 
         return panel;
     }
 
@@ -159,7 +160,14 @@ public class CaroFrame extends JFrame implements ActionListener {
         panel.add(createPanelStatus(!player));
         return panel;
     }
-
+    
+    private JPanel createLeftSideBar() {
+        JPanel panel = new JPanel(); 
+        JButton btn_undo = new JButton("UNDO"); 
+        btn_undo.addActionListener(this);
+        panel.add(btn_undo); 
+        return panel; 
+    }
     private JPanel createPanelStatus(boolean player) {
         JPanel panelStatus = new JPanel(new GridLayout(2, 1, 2, 2));
         JPanel panel1 = new JPanel();
@@ -283,6 +291,10 @@ public class CaroFrame extends JFrame implements ActionListener {
                 actionExit();
                 break;
             }
+            case "UNDO": {
+                actionUndo(); 
+                break; 
+            }
         }
 
     }
@@ -302,5 +314,8 @@ public class CaroFrame extends JFrame implements ActionListener {
         if (select == 0) {
             clear();
         }
+    }
+    private void actionUndo() {
+        caroGraphics.undo(); 
     }
 }
