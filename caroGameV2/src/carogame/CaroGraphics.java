@@ -121,5 +121,15 @@ public class CaroGraphics extends JPanel {
     }
     //undo 
     // canundo
+    
+    public void undo() {
+        player = !player; 
+        Point point = pointVector.get(pointVector.size() - 1); 
+        point = convertPointToMatrix(convertPoint(point)); 
+        process.undoMatrix(point);
+        undoManager.undo();
+        setStatus();
+        repaint();
+    }
 
 }
