@@ -54,7 +54,7 @@ public class CaroGraphics extends JPanel {
         for (int i = 0; i < pointVector.size(); i++) {
             Image image = player ? myImage.imgCross : myImage.imgNought;
             Point point = convertPointToCaro(convertPoint(pointVector.get(i)));
-            g.drawImage(image, point.x, point.y, null);
+            g.drawImage(image, point.x + 2, point.y + 2, null);
             player = !player;
         }
     }
